@@ -19,11 +19,7 @@ class Multiples
   end
 
   def sum_multiples
-    sum = 0
-    self.collect_multiples.each do |num|
-      sum += num
-    end
-  sum
+    self.collect_multiples.inject { |result, num| result + num }
   end
 
 

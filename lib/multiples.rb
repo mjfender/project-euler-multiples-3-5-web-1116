@@ -16,9 +16,10 @@ def collect_multiples(number)
 end
 
 def sum_multiples(limit)
-  sum = 0
-  collect_multiples(limit).each do |num|
-    sum += num
-  end
-  sum
+  collect_multiples(limit).inject { |result, num| result + num }
+  # sum = 0
+  # collect_multiples(limit).each do |num|
+  #   sum += num
+  # end
+  # sum
 end
